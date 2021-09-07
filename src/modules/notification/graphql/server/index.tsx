@@ -157,5 +157,4 @@ export const FETCH_NOTIFICATION_QUERY = gql`
 		}
 	}
 	${MyCommentFragmentFragmentDoc}
-	${FriendFragmentFragmentDoc}
 `
