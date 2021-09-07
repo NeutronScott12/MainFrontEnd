@@ -7,7 +7,7 @@ import { ThemeProvider } from 'styled-components'
 import { CURRENT_THEME_QUERY, CURRENT_USER_QUERY_CLIENT } from './apollo/graphql/client'
 import { LOGOUT_MUTATION } from './modules/authentication/graphql'
 import { AUTHORISE_USER } from './modules/authentication/graphql/client'
-import SubscriptionContainer from './modules/notification/containers/SubcriptionContainer'
+// import SubscriptionContainer from './modules/notification/containers/SubcriptionContainer'
 import Header from './partials/Header/Header'
 import Routes from './router'
 import { Container, GlobalStyle, MainLayoutStyle } from './styles'
@@ -32,8 +32,8 @@ interface IProps {
 	currentUserServer: any
 	logoutMutation: any
 
-	authoriseUser: ({  }: IVariables) => any
-	changeTheme: ({  }: any) => any
+	authoriseUser: ({}: IVariables) => any
+	changeTheme: ({}: any) => any
 }
 
 const CountContext = React.createContext({ count: 0 })
@@ -187,10 +187,10 @@ class MainLayout extends React.Component<ChildProps<IProps>, IState> {
 				<React.Fragment>
 					{this.props.currentUser.authorisedUser.id !== '' ? (
 						<React.Fragment>
-							<SubscriptionContainer
+							{/* <SubscriptionContainer
 								username={this.props.currentUser.authorisedUser.username}
 								id={this.props.currentUser.authorisedUser.id}
-							/>
+							/> */}
 
 							<ToastContainer
 								autoClose={5000}
